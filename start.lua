@@ -98,8 +98,8 @@ token=Token
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 namebot = redis:get(bot_id..":namebot") or " تركيا"
-SudosS = {932319116,1848546111}
-Sudos = {sudoid,932319116,1848546111}
+SudosS = {932319116}
+Sudos = {sudoid,932319116}
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 function Bot(msg)  
@@ -213,15 +213,15 @@ var = redis:get(bot_id..":Reply:developer"..chat_id) or "المطور"
 elseif redis:sismember(bot_id..":"..chat_id..":Status:Creator", user_id) then
 var = redis:get(bot_id..":Reply:Creator"..chat_id) or "المالك"  
 elseif redis:sismember(bot_id..":"..chat_id..":Status:BasicConstructor", user_id) then
-var = redis:get(bot_id..":Reply:BasicConstructor"..chat_id) or "الرائد الاساسي"  
+var = redis:get(bot_id..":Reply:BasicConstructor"..chat_id) or "المنشئ الاساسي"  
 elseif redis:sismember(bot_id..":"..chat_id..":Status:Constructor", user_id) then
-var = redis:get(bot_id..":Reply:Constructor"..chat_id) or "الرائد"  
+var = redis:get(bot_id..":Reply:Constructor"..chat_id) or "المنشئ"  
 elseif redis:sismember(bot_id..":"..chat_id..":Status:Owner", user_id) then
-var = redis:get(bot_id..":Reply:Owner"..chat_id)  or "النقيب"  
+var = redis:get(bot_id..":Reply:Owner"..chat_id)  or "المدير"  
 elseif redis:sismember(bot_id..":"..chat_id..":Status:Administrator", user_id) then
-var = redis:get(bot_id..":Reply:Administrator"..chat_id) or "الملازم"  
+var = redis:get(bot_id..":Reply:Administrator"..chat_id) or "الادمن"  
 elseif redis:sismember(bot_id..":"..chat_id..":Status:Vips", user_id) then
-var = redis:get(bot_id..":Reply:Vips"..chat_id) or "الجندي"  
+var = redis:get(bot_id..":Reply:Vips"..chat_id) or "المميز"  
 else  
 var = redis:get(bot_id..":Reply:mem"..chat_id) or "المواطن"
 end  
@@ -972,13 +972,13 @@ reply_markup = reply_markup
 t = "*- اوامر الحمايه اتبع مايلي .\n *  ٴ— — — — — — — — — — —  *\n- قفل ، فتح ← الامر .\n- تستطيع قفل حمايه كما يلي .\n- ( بالتقيد ، بالطرد ، بالكتم ، بالتقييد ) .\n *  ٴ— — — — — — — — — — —  *\n- تاك .\n- القناه .\n- الصور .\n- الرابط .\n- الفشار .\n- الموقع .\n- التكرار .\n- الفيديو .\n- الدخول .\n- الاضافه .\n- الاغاني .\n- الصوت .\n- الملفات .\n- الرسائل .\n- الدردشه .\n- الجهات .\n- السيلفي .\n- التثبيت .\n- الشارحه .\n- الكلايش .\n- البوتات .\n- التوجيه .\n- التعديل .\n- الانلاين .\n- المعرفات .\n- الكيبورد .\n- الفارسيه .\n- الانكليزيه .\n- الاستفتاء .\n- الملصقات .\n- الاشعارات .\n- الماركداون .\n- المتحركات .*"
 elseif infomsg[2] == '2' then
 reply_markup = reply_markup
-t = "*- اعدادات المجموعه .\n *  ٴ— — — — — — — — — — —  *\n- الترحيب .\n- مسح الرتب .\n- الغاء التثبيت .\n- فحص البوت .\n- تعين الرابط .\n- مسح الرابط .\n- تغيير الايدي .\n- تعين الايدي .\n- مسح الايدي .\n- مسح الترحيب .\n- صورتي .\n- تغيير اسم المجموعه .\n- تعين قوانين .\n- تغيير الوصف .\n- مسح القوانين .\n- تنظيف التعديل .\n- تنظيف الميديا .\n- مسح الرابط .\n- رفع الملازميه .\n- تعين ترحيب .\n- الترحيب .\n- الالعاب الاحترافيه .\n- المجموعه .*"
+t = "*- اعدادات المجموعه .\n *  ٴ— — — — — — — — — — —  *\n- الترحيب .\n- مسح الرتب .\n- الغاء التثبيت .\n- فحص البوت .\n- تعين الرابط .\n- مسح الرابط .\n- تغيير الايدي .\n- تعين الايدي .\n- مسح الايدي .\n- مسح الترحيب .\n- صورتي .\n- تغيير اسم المجموعه .\n- تعين قوانين .\n- تغيير الوصف .\n- مسح القوانين .\n- تنظيف التعديل .\n- تنظيف الميديا .\n- مسح الرابط .\n- رفع الادمنيه .\n- تعين ترحيب .\n- الترحيب .\n- الالعاب الاحترافيه .\n- المجموعه .*"
 elseif infomsg[2] == '3' then
 reply_markup = reply_markup
-t = "*- اوامر التفعيل والتعطيل .\n- تفعيل/تعطيل الامر اسفل .\n *  ٴ— — — — — — — — — — —  *\n- اوامر التسليه .\n- الالعاب الاحترافيه .\n- الطرد .\n- الحظر .\n- الرفع .\n- الجنديات .\n- المسح التلقائي .\n- ٴall .\n- منو ضافني .\n- تفعيل الردود .\n- الايدي بالصوره .\n- الايدي .\n- التنظيف .\n- الترحيب .\n- الرابط .\n- البايو .\n- صورتي .\n- الالعاب .*"
+t = "*- اوامر التفعيل والتعطيل .\n- تفعيل/تعطيل الامر اسفل .\n *  ٴ— — — — — — — — — — —  *\n- اوامر التسليه .\n- الالعاب الاحترافيه .\n- الطرد .\n- الحظر .\n- الرفع .\n- المميزات .\n- المسح التلقائي .\n- ٴall .\n- منو ضافني .\n- تفعيل الردود .\n- الايدي بالصوره .\n- الايدي .\n- التنظيف .\n- الترحيب .\n- الرابط .\n- البايو .\n- صورتي .\n- الالعاب .*"
 elseif infomsg[2] == '4' then
 reply_markup = reply_markup
-t = "*- اوامر اخرى .\n *  ٴ— — — — — — — — — — —  *\n- الالعاب الاحترافيه .\n- المجموعه .\n- الرابط .\n- اسمي .\n- ايديي .\n- مسح نقاطي .\n- نقاطي .\n- مسح رسائلي .\n- رسائلي .\n- مسح جهاتي .\n- مسح بالرد .\n- تفاعلي .\n- جهاتي .\n- مسح سحكاتي .\n- سحكاتي .\n- رتبتي .\n- معلوماتي .\n- الرائد .\n- رفع الرائد .\n- البايو/نبذتي .\n- التاريخ/الساعه .\n- رابط الحذف .\n- الالعاب .\n- منع بالرد .\n- منع .\n- تنظيف + عدد .\n- قائمه المنع .\n- مسح قائمه المنع .\n- مسح الاوامر المضافه .\n- الاوامر المضافه .\n- ترتيب الاوامر .\n- اضف امر .\n- حذف امر .\n- اضف رد .\n- حذف رد .\n- ردود النقيب .\n- مسح ردود النقيب .\n- الردود المتعدده .\n- مسح الردود المتعدده .\n- وضع عدد المسح +رقم .\n- مسح البوتات .\n- ٴall .\n- غنيلي، فلم ، متحركه ، رمزيه ، فيديو .\n- تغير رد المواطن ، الجندي ، الملازم ، النقيب ، الرائد ، الرائد الاساسي. المالك ، المطور .\n- حذف رد المواطن ، الجندي ، الملازم ، النقيب ، الرائد الرائد الاساسي ، المالك المطور .*"
+t = "*- اوامر اخرى .\n *  ٴ— — — — — — — — — — —  *\n- الالعاب الاحترافيه .\n- المجموعه .\n- الرابط .\n- اسمي .\n- ايديي .\n- مسح نقاطي .\n- نقاطي .\n- مسح رسائلي .\n- رسائلي .\n- مسح جهاتي .\n- مسح بالرد .\n- تفاعلي .\n- جهاتي .\n- مسح سحكاتي .\n- سحكاتي .\n- رتبتي .\n- معلوماتي .\n- المنشئ .\n- رفع المنشئ .\n- البايو/نبذتي .\n- التاريخ/الساعه .\n- رابط الحذف .\n- الالعاب .\n- منع بالرد .\n- منع .\n- تنظيف + عدد .\n- قائمه المنع .\n- مسح قائمه المنع .\n- مسح الاوامر المضافه .\n- الاوامر المضافه .\n- ترتيب الاوامر .\n- اضف امر .\n- حذف امر .\n- اضف رد .\n- حذف رد .\n- ردود المدير .\n- مسح ردود المدير .\n- الردود المتعدده .\n- مسح الردود المتعدده .\n- وضع عدد المسح +رقم .\n- مسح البوتات .\n- ٴall .\n- غنيلي، فلم ، متحركه ، رمزيه ، فيديو .\n- تغير رد المواطن ، المميز ، الادمن ، المدير ، المنشئ ، المنشئ الاساسي. المالك ، المطور .\n- حذف رد المواطن ، المميز ، الادمن ، المدير ، المنشئ المنشئ الاساسي ، المالك المطور .*"
 elseif infomsg[2] == '5' then
 reply_markup = bot.replyMarkup{
 type = 'inline',data = {
@@ -1339,7 +1339,7 @@ type = 'inline',data = {
 {{text = '- رجوع',data="Can"}},
 }
 }
-bot.editMessageText(chat_id,msg_id,"*- قم برفع البوت ملازم في قناتك ثم قم بأرسل توجيه من القناه الى البوت .*", 'md', true, false, reply_markup)
+bot.editMessageText(chat_id,msg_id,"*- قم برفع البوت ادمن في قناتك ثم قم بأرسل توجيه من القناه الى البوت .*", 'md', true, false, reply_markup)
 redis:set(bot_id..":set:"..chat_id..":addCh",true)
 end
 if Text == 'TheCh' then
@@ -1783,7 +1783,7 @@ if Get_Chat.id then
 local statusMem = bot.getChatMember(Get_Chat.id,bot_id)
 if statusMem.status.luatele == "chatMemberStatusMember" then
 x = x + 1
-bot.sendText(Get_Chat.id,0,'*- البوت ليس ملازم في المجموعه*',"md")
+bot.sendText(Get_Chat.id,0,'*- البوت ليس ادمن في المجموعه*',"md")
 redis:srem(bot_id..":Groups",Get_Chat.id)
 local keys = redis:keys(bot_id..'*'..Get_Chat.id)
 for i = 1, #keys do
@@ -2158,7 +2158,7 @@ type = 'inline',data = {
 if redis:get(bot_id..":start") then
 r = redis:get(bot_id..":start")
 else
-r ="*- اهلا بك عزيزي انا تركيا .\n- لحمايه المجموعات وجنديات خدميه اخرى .\n- ارفعي مشرف في كروبك وارسل تفعيل .\n- سيتم رفع المالك والملازميه تلقائيا .*"
+r ="*- اهلا بك عزيزي انا تركيا .\n- لحمايه المجموعات ومميزات خدميه اخرى .\n- ارفعي مشرف في كروبك وارسل تفعيل .\n- سيتم رفع المالك والادمنيه تلقائيا .*"
 end
 return bot.sendText(msg.chat_id,msg.id,r,"md", true, false, false, false, reply_markup)
 end
@@ -2899,8 +2899,8 @@ dofile("start.lua")
 end 
 end
 if Constructor(msg) then
-if text == ("مسح ردود النقيب") then
-ext = "*- تم مسح قائمه ردود النقيب .*"
+if text == ("مسح ردود المدير") then
+ext = "*- تم مسح قائمه ردود المدير .*"
 local list = redis:smembers(bot_id.."List:Rp:content"..msg.chat_id)
 for k,v in pairs(list) do
 if redis:get(bot_id.."Rp:content:Animation"..msg.chat_id..":"..v) then
@@ -3026,9 +3026,9 @@ if text == "حذف رد" or text == "مسح رد" then
 bot.sendText(msg.chat_id,msg.id,"*- ارسل الان الكلمه لحذفها من الردود .*","md",true)
 redis:set(bot_id..":"..msg.chat_id..":"..msg.sender.user_id..":Rp:del",true)
 end
-if text == ("ردود النقيب") then
+if text == ("ردود المدير") then
 local list = redis:smembers(bot_id.."List:Rp:content"..msg.chat_id)
-ext = "- قائمه ردود النقيب\n ٴ ٴ— — — — — — — — — — — — \n"
+ext = "- قائمه ردود المدير\n ٴ ٴ— — — — — — — — — — — — \n"
 for k,v in pairs(list) do
 if redis:get(bot_id.."Rp:content:Animation"..msg.chat_id..":"..v) then
 db = "متحركه 🎭"
@@ -3206,7 +3206,7 @@ redis:set(bot_id..":"..msg.chat_id..":Command:ر","الرابط")
 redis:sadd(bot_id.."List:Command:"..msg.chat_id,"ر")
 redis:set(bot_id..":"..msg.chat_id..":Command:سح","مسح سحكاتي")
 redis:sadd(bot_id.."List:Command:"..msg.chat_id,"سح")
-redis:set(bot_id..":"..msg.chat_id..":Command:رر","ردود النقيب")
+redis:set(bot_id..":"..msg.chat_id..":Command:رر","ردود المدير")
 redis:sadd(bot_id.."List:Command:"..msg.chat_id,"رر")
 redis:set(bot_id..":"..msg.chat_id..":Command:رد","اضف رد")
 redis:sadd(bot_id.."List:Command:"..msg.chat_id,"رد")
@@ -3220,19 +3220,19 @@ redis:set(bot_id..":"..msg.chat_id..":Command:تك","تنزيل الكل")
 redis:sadd(bot_id.."List:Command:"..msg.chat_id,"تك")
 redis:set(bot_id..":"..msg.chat_id..":Command:ثانوي","رفع مطور ثانوي")
 redis:sadd(bot_id.."List:Command:"..msg.chat_id,"ثانوي")
-redis:set(bot_id..":"..msg.chat_id..":Command:اس","رفع رائد اساسي")
+redis:set(bot_id..":"..msg.chat_id..":Command:اس","رفع منشئ اساسي")
 redis:sadd(bot_id.."List:Command:"..msg.chat_id,"اس")
-redis:set(bot_id..":"..msg.chat_id..":Command:من","رفع رائد")
+redis:set(bot_id..":"..msg.chat_id..":Command:من","رفع منشئ")
 redis:sadd(bot_id.."List:Command:"..msg.chat_id,"من")
-redis:set(bot_id..":"..msg.chat_id..":Command:مد","رفع نقيب")
+redis:set(bot_id..":"..msg.chat_id..":Command:مد","رفع مدير")
 redis:sadd(bot_id.."List:Command:"..msg.chat_id,"مد")
-redis:set(bot_id..":"..msg.chat_id..":Command:اد","رفع ملازم")
+redis:set(bot_id..":"..msg.chat_id..":Command:اد","رفع ادمن")
 redis:sadd(bot_id.."List:Command:"..msg.chat_id,"اد")
 redis:set(bot_id..":"..msg.chat_id..":Command:مط","رفع مطور")
 redis:sadd(bot_id.."List:Command:"..msg.chat_id,"مط")
-redis:set(bot_id..":"..msg.chat_id..":Command:م","رفع جندي")
+redis:set(bot_id..":"..msg.chat_id..":Command:م","رفع مميز")
 redis:sadd(bot_id.."List:Command:"..msg.chat_id,"م")
-bot.sendText(msg.chat_id,msg.id,"*- تم ترتيب الاوامر بالشكل التالي . \n- تفعيل الايدي بالصوره - تفع . \n- تعطيل الايدي بالصوره - تعط . \n- رفع مطور ثانوي - ثانوي . \n- رفع مطور - مط . \n- رفع رائد اساسي - اس . \n- رفع رائد - من . \n- رفع نقيب - مد . \n- رفع ملازم - اد . \n- رفع جندي - م . \n- تنزيل الكل - تك . \n- تغير الايدي - تغ . \n- تاك للكل - تاك . \n- تثبيت - ت . \n- الرابط - ر . \n- مسح رسائلي - رس . \n- مسح سحكاتي - سح . \n- مسح المكتومين - ،، . \n- اضف رد - رد . \n- غنيلي - غ . \n- شعر - ش . \n- ميمز - مم . \n- ريمكس - رم . \n- راب - ب . \n- ردود النقيب - رر .*","md",true)
+bot.sendText(msg.chat_id,msg.id,"*- تم ترتيب الاوامر بالشكل التالي . \n- تفعيل الايدي بالصوره - تفع . \n- تعطيل الايدي بالصوره - تعط . \n- رفع مطور ثانوي - ثانوي . \n- رفع مطور - مط . \n- رفع منشئ اساسي - اس . \n- رفع منشئ - من . \n- رفع مدير - مد . \n- رفع ادمن - اد . \n- رفع مميز - م . \n- تنزيل الكل - تك . \n- تغير الايدي - تغ . \n- تاك للكل - تاك . \n- تثبيت - ت . \n- الرابط - ر . \n- مسح رسائلي - رس . \n- مسح سحكاتي - سح . \n- مسح المكتومين - ،، . \n- اضف رد - رد . \n- غنيلي - غ . \n- شعر - ش . \n- ميمز - مم . \n- ريمكس - رم . \n- راب - ب . \n- ردود المدير - رر .*","md",true)
 end
 end
 if text == "اوامر التسليه" or text == "اوامر التسلية" then    
@@ -3309,11 +3309,11 @@ end
 if text == "م1" or text == "م١" or text == "اوامر الحمايه" then    
 bot.sendText(msg.chat_id,msg.id,"*- اوامر الحمايه اتبع مايلي .\n *  ٴ— — — — — — — — — — —  *\n- قفل ، فتح ← الامر .\n← تستطيع قفل حمايه كما يلي .\n← { بالتقيد ، بالطرد ، بالكتم ، بالتقييد }\n *  ٴ— — — — — — — — — — —  *\n- تاك . \n- القناه .\n- الصور .\n- الرابط .\n- الفشار .\n- الموقع .\n- التكرار .\n- التفليش .\n- الاباحي .\n- الكفر .\n- الفيديو .\n- الدخول .\n- الاضافه .\n- الاغاني .\n- الصوت .\n- الملفات .\n- الرسائل .\n- الدردشه .\n- الجهات .\n- السيلفي .\n- التثبيت .\n- الشارحه .\n- الكلايش .\n- البوتات .\n- التوجيه .\n- التعديل .\n- الانلاين .\n- المعرفات .\n- الكيبورد .\n- الفارسيه .\n- الانكليزيه .\n- الاستفتاء .\n- الملصقات .\n- الاشعارات .\n- الماركداون .\n- المتحركات .*","md",true)
 elseif text == "م2" or text == "م٢" then    
-bot.sendText(msg.chat_id,msg.id,"*- اعدادات المجموعه .\n *  ٴ— — — — — — — — — — —  *\n- مسح الرتب .\n- الرابط .\n- مسح الرابط .\n- وضع رابط .\n- تعين الرابط .\n- فحص البوت .\n- الترحيب .\n- مسح الترحيب .\n- وضع ترحيب .\n- تنظيف التعديل .\n- تنظيف الميديا .\n- مسح الميديا .\n- تعين قوانين .\n- مسح القوانين .\n- وضع قوانين .\n-  تعين الايدي .\n- مسح الايدي .\n- تغير الايدي .\n- تغيير اسم المجموعه .\n- تغيير الوصف .\n- رفع الملازميه .\n- الالعاب الاحترافيه .\n- المجموعه .*","md",true)
+bot.sendText(msg.chat_id,msg.id,"*- اعدادات المجموعه .\n *  ٴ— — — — — — — — — — —  *\n- مسح الرتب .\n- الرابط .\n- مسح الرابط .\n- وضع رابط .\n- تعين الرابط .\n- فحص البوت .\n- الترحيب .\n- مسح الترحيب .\n- وضع ترحيب .\n- تنظيف التعديل .\n- تنظيف الميديا .\n- مسح الميديا .\n- تعين قوانين .\n- مسح القوانين .\n- وضع قوانين .\n-  تعين الايدي .\n- مسح الايدي .\n- تغير الايدي .\n- تغيير اسم المجموعه .\n- تغيير الوصف .\n- رفع الادمنيه .\n- الالعاب الاحترافيه .\n- المجموعه .*","md",true)
 elseif text == "م3" or text == "م٣" then    
-bot.sendText(msg.chat_id,msg.id,"*- اوامر التفعيل والتعطيل .\n- تفعيل/تعطيل الامر اسفل .\n *  ٴ— — — — — — — — — — —  *\n- اوامر التسليه .\n- الالعاب الاحترافيه .\n- الطرد .\n- الحظر .\n- الرفع .\n- الجنديات .\n- المسح التلقائي .\n- ٴall .\n- منو ضافني .\n- تفعيل الردود .\n- الايدي بالصوره .\n- الايدي .\n- التنظيف .\n- الترحيب .\n- الرابط .\n- البايو .\n- صورتي .\n- الالعاب .*","md",true)
+bot.sendText(msg.chat_id,msg.id,"*- اوامر التفعيل والتعطيل .\n- تفعيل/تعطيل الامر اسفل .\n *  ٴ— — — — — — — — — — —  *\n- اوامر التسليه .\n- الالعاب الاحترافيه .\n- الطرد .\n- الحظر .\n- الرفع .\n- المميزات .\n- المسح التلقائي .\n- ٴall .\n- منو ضافني .\n- تفعيل الردود .\n- الايدي بالصوره .\n- الايدي .\n- التنظيف .\n- الترحيب .\n- الرابط .\n- البايو .\n- صورتي .\n- الالعاب .*","md",true)
 elseif text == "م4" or text == "م٤" then    
-bot.sendText(msg.chat_id,msg.id,"*- اوامر اخرى .\n *  ٴ— — — — — — — — — — —  *\n- الالعاب الاحترافيه .\n- المجموعه .\n- الرابط .\n- اسمي .\n- ايديي .\n- مسح نقاطي .\n- نقاطي .\n- مسح رسائلي .\n- رسائلي .\n- مسح جهاتي .\n- مسح بالرد .\n- تفاعلي .\n- جهاتي .\n- مسح سحكاتي .\n- سحكاتي .\n- رتبتي .\n- معلوماتي .\n- الرائد .\n- رفع الرائد .\n- البايو/نبذتي .\n- التاريخ/الساعه .\n- رابط الحذف .\n- الالعاب .\n- منع بالرد .\n- منع .\n- تنظيف + عدد .\n- قائمه المنع .\n- مسح قائمه المنع .\n- مسح الاوامر المضافه .\n- الاوامر المضافه .\n- ترتيب الاوامر .\n- اضف امر .\n- حذف امر .\n- اضف رد .\n- حذف رد .\n- ردود النقيب .\n- مسح الردود المتعدده .\n- الردود المتعدده .\n- وضع عدد المسح +رقم .\n- ٴall .\n- غنيلي،فلم، متحركه، فيديو، رمزيه،انمي،ريمكس،شعر،ميمز،راب .\n- مسح ردود النقيب .\n- تغير رد المواطن.الجندي.الملازم.النقيب.الرائد.الرائد الاساسي.المالك.المطو  .\n- حذف رد المواطن.الجندي.الملازم.النقيب.الرائد.الرائد الاساسي.المالك.المطور .*","md",true)
+bot.sendText(msg.chat_id,msg.id,"*- اوامر اخرى .\n *  ٴ— — — — — — — — — — —  *\n- الالعاب الاحترافيه .\n- المجموعه .\n- الرابط .\n- اسمي .\n- ايديي .\n- مسح نقاطي .\n- نقاطي .\n- مسح رسائلي .\n- رسائلي .\n- مسح جهاتي .\n- مسح بالرد .\n- تفاعلي .\n- جهاتي .\n- مسح سحكاتي .\n- سحكاتي .\n- رتبتي .\n- معلوماتي .\n- المنشئ .\n- رفع المنشئ .\n- البايو/نبذتي .\n- التاريخ/الساعه .\n- رابط الحذف .\n- الالعاب .\n- منع بالرد .\n- منع .\n- تنظيف + عدد .\n- قائمه المنع .\n- مسح قائمه المنع .\n- مسح الاوامر المضافه .\n- الاوامر المضافه .\n- ترتيب الاوامر .\n- اضف امر .\n- حذف امر .\n- اضف رد .\n- حذف رد .\n- ردود المدير .\n- مسح الردود المتعدده .\n- الردود المتعدده .\n- وضع عدد المسح +رقم .\n- ٴall .\n- غنيلي،فلم، متحركه، فيديو، رمزيه،انمي،ريمكس،شعر،ميمز،راب .\n- مسح ردود المدير .\n- تغير رد المواطن.المميز.الادمن.المدير.المنشئ.المنشئ الاساسي.المالك.المطو  .\n- حذف رد المواطن.المميز.الادمن.المدير.المنشئ.المنشئ الاساسي.المالك.المطور .*","md",true)
 elseif text == "قفل الكل" or text == "قفل التفليش" or text == "قفل الاباحي" or text == "قفل الكفر" then
 bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- تم "..text.." .*").by,"md",true)
 list ={"Spam","Edited","Hashtak","via_bot_user_id","messageChatAddMembers","forward_info","Links","Markdaun","WordsFshar","Spam","Tagservr","Username","Keyboard","messagePinMessage","messageSenderChat","Cmd","messageLocation","messageContact","messageVideoNote","messagePoll","messageAudio","messageDocument","messageAnimation","messageSticker","messageVoiceNote","WordsPersian","messagePhoto","messageVideo"}
@@ -3978,7 +3978,7 @@ bot.sendText(msg.chat_id,msg.id,GetBio(msg.sender.user_id),"md",true)
 return false
 end
 end
-if text == 'رفع الرائد' or text == 'رفع المالك' then
+if text == 'رفع المنشئ' or text == 'رفع المالك' then
 if msg.can_be_deleted_for_all_users == false then
 bot.sendText(msg.chat_id,msg.id,"*- البوت لا يمتلك صلاحيه .*","md",true)  
 return false
@@ -3992,7 +3992,7 @@ return bot.sendText(msg.chat_id,msg.id,"*- تم "..text.." بنجاح .*","md",t
 end
 end
 end
-if text == 'الرائد' or text == 'المالك' then
+if text == 'المنشئ' or text == 'المالك' then
 if msg.can_be_deleted_for_all_users == false then
 bot.sendText(msg.chat_id,msg.id,"*- البوت لا يمتلك صلاحيه .*","md",true)  
 return false
@@ -4023,7 +4023,7 @@ custom = 'لا يوجد'
 end
 end
 if sm.status.luatele == "chatMemberStatusCreator"  then
-gstatus = "الرائد"
+gstatus = "المنشئ"
 elseif sm.status.luatele == "chatMemberStatusAdministrator" then
 gstatus = "المشرف"
 else
@@ -4114,7 +4114,7 @@ if text == 'معلوماتي' or text == 'موقعي' or text == 'صلاحيات
 local UserInfo = bot.getUser(msg.sender.user_id)
 local Statusm = bot.getChatMember(msg.chat_id,msg.sender.user_id).status.luatele
 if Statusm == "chatMemberStatusCreator" then
-StatusmC = 'رائد'
+StatusmC = 'منشئ'
 elseif Statusm == "chatMemberStatusAdministrator" then
 StatusmC = 'مشرف'
 else
@@ -4240,7 +4240,7 @@ return false
 end
 sm = bot.getChatMember(msg.chat_id,UserId_Info.id)
 if sm.status.luatele == "chatMemberStatusCreator"  then
-gstatus = "الرائد"
+gstatus = "المنشئ"
 elseif sm.status.luatele == "chatMemberStatusAdministrator" then
 gstatus = "المشرف"
 else
@@ -4258,7 +4258,7 @@ uame = 'لا يوجد'
 end
 sm = bot.getChatMember(msg.chat_id,Remsg.sender.user_id)
 if sm.status.luatele == "chatMemberStatusCreator"  then
-gstatus = "الرائد"
+gstatus = "المنشئ"
 elseif sm.status.luatele == "chatMemberStatusAdministrator" then
 gstatus = "المشرف"
 else
@@ -4279,7 +4279,7 @@ uame = 'لا يوجد'
 end
 sm = bot.getChatMember(msg.chat_id,UserName)
 if sm.status.luatele == "chatMemberStatusCreator"  then
-gstatus = "الرائد"
+gstatus = "المنشئ"
 elseif sm.status.luatele == "chatMemberStatusAdministrator" then
 gstatus = "المشرف"
 else
@@ -4352,7 +4352,7 @@ return false
 end
 if text == "منو ضافني" and not redis:get(bot_id..":"..msg.chat_id..":settings:addme") then
 if bot.getChatMember(msg.chat_id,msg.sender.user_id).status.luatele == "chatMemberStatusCreator" then
-bot.sendText(msg.chat_id,msg.id,"*- انت رائد المجموعه .*","md",true) 
+bot.sendText(msg.chat_id,msg.id,"*- انت منشئ المجموعه .*","md",true) 
 return false
 end
 addby = redis:get(bot_id..":"..msg.chat_id..":"..msg.sender.user_id..":AddedMe")
@@ -4535,7 +4535,7 @@ data = {
 {{text = Get_Chat.title, url = Info_Chats.invite_link.invite_link}},
 }
 }
-bot.sendText(msg.chat_id,msg.id,'\n*- معلومات المجموعه :\n- الايدي : ( '..msg.chat_id..' )\n- عدد الاعضاء : '..Info_Chats.member_count..'\n- عدد الملازميه : '..Info_Chats.administrator_count..'\n- عدد المطرودين : '..Info_Chats.banned_count..'\n- عدد المقيدين : '..Info_Chats.restricted_count..'\n- الرابط\n : '..Info_Chats.invite_link.invite_link..'*',"md",true, false, false, false, reply_markup)
+bot.sendText(msg.chat_id,msg.id,'\n*- معلومات المجموعه :\n- الايدي : ( '..msg.chat_id..' )\n- عدد الاعضاء : '..Info_Chats.member_count..'\n- عدد الادمنيه : '..Info_Chats.administrator_count..'\n- عدد المطرودين : '..Info_Chats.banned_count..'\n- عدد المقيدين : '..Info_Chats.restricted_count..'\n- الرابط\n : '..Info_Chats.invite_link.invite_link..'*',"md",true, false, false, false, reply_markup)
 return false
 end
 if not redis:get(bot_id..":"..msg.chat_id..":settings:gameVip") then
@@ -4727,7 +4727,7 @@ t = "*- تم حذف ( "..y.." ) من الميديا  .*"
 end
 bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,t).yu,"md",true)  
 end
-if text == 'رفع الملازميه' then
+if text == 'رفع الادمنيه' then
 if msg.can_be_deleted_for_all_users == false then
 bot.sendText(msg.chat_id,msg.id,"*- البوت لا يمتلك صلاحيه .*","md",true)  
 return false
@@ -4745,7 +4745,7 @@ y = y + 1
 end
 end
 end
-bot.sendText(msg.chat_id,msg.id,'*- تم رفع  ('..y..') ملازم بالمجموعه .*',"md",true)  
+bot.sendText(msg.chat_id,msg.id,'*- تم رفع  ('..y..') ادمن بالمجموعه .*',"md",true)  
 end
 if text == 'تعين ترحيب' or text == 'تعيين ترحيب' or text == 'وضع ترحيب' or text == 'اضف ترحيب' then
 redis:set(bot_id..":"..msg.chat_id..":"..msg.sender.user_id..":we:add",true)
@@ -4842,7 +4842,7 @@ end
 if text and text:match('^تنظيف (%d+)$') then
 local NumMessage = text:match('^تنظيف (%d+)$')
 if msg.can_be_deleted_for_all_users == false then
-bot.sendText(msg.chat_id,msg.id,"*- البوت ليس ملازم في المجموعه .*","md",true)  
+bot.sendText(msg.chat_id,msg.id,"*- البوت ليس ادمن في المجموعه .*","md",true)  
 return false
 end
 if GetInfoBot(msg).Delmsg == false then
@@ -4880,24 +4880,24 @@ elseif text and text:match("^تغير رد المالك (.*)$") then
 local Teext = text:match("^تغير رد المالك (.*)$") 
 redis:set(bot_id..":Reply:Creator"..msg.chat_id,Teext)
 bot.sendText(msg.chat_id,msg.id,"*- تم تغيير الرد بنجاح الى :  .*"..Teext.. "", 'md')
-elseif text and text:match("^تغير رد الرائد الاساسي (.*)$") then
-local Teext = text:match("^تغير رد الرائد الاساسي (.*)$") 
+elseif text and text:match("^تغير رد المنشئ الاساسي (.*)$") then
+local Teext = text:match("^تغير رد المنشئ الاساسي (.*)$") 
 redis:set(bot_id..":Reply:BasicConstructor"..msg.chat_id,Teext)
 bot.sendText(msg.chat_id,msg.id,"*- تم تغيير الرد بنجاح الى :  .*"..Teext.. "", 'md')
-elseif text and text:match("^تغير رد الرائد (.*)$") then
-local Teext = text:match("^تغير رد الرائد (.*)$") 
+elseif text and text:match("^تغير رد المنشئ (.*)$") then
+local Teext = text:match("^تغير رد المنشئ (.*)$") 
 redis:set(bot_id..":Reply:Constructor"..msg.chat_id,Teext)
 bot.sendText(msg.chat_id,msg.id,"*- تم تغيير الرد بنجاح الى :  .*"..Teext.. "", 'md')
-elseif text and text:match("^تغير رد النقيب (.*)$") then
-local Teext = text:match("^تغير رد النقيب (.*)$") 
+elseif text and text:match("^تغير رد المدير (.*)$") then
+local Teext = text:match("^تغير رد المدير (.*)$") 
 redis:set(bot_id..":Reply:Owner"..msg.chat_id,Teext) 
 bot.sendText(msg.chat_id,msg.id,"*- تم تغيير الرد بنجاح الى :  .*"..Teext.. "", 'md')
-elseif text and text:match("^تغير رد الملازم (.*)$") then
-local Teext = text:match("^تغير رد الملازم (.*)$") 
+elseif text and text:match("^تغير رد الادمن (.*)$") then
+local Teext = text:match("^تغير رد الادمن (.*)$") 
 redis:set(bot_id..":Reply:Administrator"..msg.chat_id,Teext)
 bot.sendText(msg.chat_id,msg.id,"*- تم تغيير الرد بنجاح الى :  .*"..Teext.. "", 'md')
-elseif text and text:match("^تغير رد الجندي (.*)$") then
-local Teext = text:match("^تغير رد الجندي (.*)$") 
+elseif text and text:match("^تغير رد المميز (.*)$") then
+local Teext = text:match("^تغير رد المميز (.*)$") 
 redis:set(bot_id..":Reply:Vips"..msg.chat_id,Teext)
 bot.sendText(msg.chat_id,msg.id,"*- تم تغيير الرد بنجاح الى :  .*"..Teext.. "", 'md')
 elseif text and text:match("^تغير رد المواطن (.*)$") then
@@ -4910,19 +4910,19 @@ bot.sendText(msg.chat_id,msg.id,"*- تم "..text.." بنجاح .*", 'md')
 elseif text == 'حذف رد المالك' then
 redis:del(bot_id..":Reply:Creator"..msg.chat_id)
 bot.sendText(msg.chat_id,msg.id,"*- تم "..text.." بنجاح .*", 'md')
-elseif text == 'حذف رد الرائد الاساسي' then
+elseif text == 'حذف رد المنشئ الاساسي' then
 redis:del(bot_id..":Reply:BasicConstructor"..msg.chat_id)
 bot.sendText(msg.chat_id,msg.id,"*- تم "..text.." بنجاح .*", 'md')
-elseif text == 'حذف رد الرائد' then
+elseif text == 'حذف رد المنشئ' then
 redis:del(bot_id..":Reply:Constructor"..msg.chat_id)
 bot.sendText(msg.chat_id,msg.id,"*- تم "..text.." بنجاح .*", 'md')
-elseif text == 'حذف رد النقيب' then
+elseif text == 'حذف رد المدير' then
 redis:del(bot_id..":Reply:Owner"..msg.chat_id) 
 bot.sendText(msg.chat_id,msg.id,"*- تم "..text.." بنجاح .*", 'md')
-elseif text == 'حذف رد الملازم' then
+elseif text == 'حذف رد الادمن' then
 redis:del(bot_id..":Reply:Administrator"..msg.chat_id)
 bot.sendText(msg.chat_id,msg.id,"*- تم "..text.." بنجاح .*", 'md')
-elseif text == 'حذف رد الجندي' then
+elseif text == 'حذف رد المميز' then
 redis:del(bot_id..":Reply:Vips"..msg.chat_id)
 bot.sendText(msg.chat_id,msg.id,"*- تم "..text.." بنجاح .*", 'md')
 elseif text == 'حذف رد المواطن' then
@@ -5031,7 +5031,7 @@ return false
 end
 sm = bot.getChatMember(msg.chat_id,usetid)
 if sm.status.luatele == "chatMemberStatusCreator"  then
-gstatus = "الرائد"
+gstatus = "المنشئ"
 elseif sm.status.luatele == "chatMemberStatusAdministrator" then
 gstatus = "المشرف"
 else
@@ -5050,7 +5050,7 @@ return false
 end
 if not BasicConstructor(msg) then
 if redis:get(bot_id..":"..msg.chat_id..":settings:kik") then
-bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الطرد معطل بواسطه الرائدين الاساسيين .*").yu,"md",true)
+bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الطرد معطل بواسطه المنشئين الاساسيين .*").yu,"md",true)
 return false
 end
 end
@@ -5086,19 +5086,19 @@ srt1 = ":"
 elseif TextMsg == 'مالك' then
 srt = "Creator"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 srt = "BasicConstructor"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 srt = "Constructor"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 srt = "Owner"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 srt = "Administrator"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 srt = "Vips"
 srt1 = ":"..msg.chat_id..":"
 else
@@ -5115,15 +5115,15 @@ if TextMsg == 'مطور' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
 elseif TextMsg == 'مالك' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
 else
 return false
@@ -5131,65 +5131,65 @@ end
 elseif developer(msg) then
 if TextMsg == 'مالك' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
 else
 return false
 end  
 elseif Creator(msg) then
-if TextMsg == 'رائد اساسي' then
+if TextMsg == 'منشئ اساسي' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
 else
 return false
 end  
 elseif BasicConstructor(msg) then
-if TextMsg == 'رائد' then
+if TextMsg == 'منشئ' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
 else
 return false
 end  
 elseif Constructor(msg) then
-if TextMsg == 'نقيب' then
+if TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
 else
 return false
 end  
 elseif Owner(msg) then
-if TextMsg == 'ملازم' then
+if TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
 else
 return false
 end  
 elseif Administrator(msg) then
-if TextMsg == 'جندي' then
+if TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,usetid)
 else
 return false
@@ -5223,19 +5223,19 @@ srt1 = ":"
 elseif TextMsg == 'مالك' then
 srt = "Creator"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 srt = "BasicConstructor"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 srt = "Constructor"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 srt = "Owner"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 srt = "Administrator"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 srt = "Vips"
 srt1 = ":"..msg.chat_id..":"
 else
@@ -5243,7 +5243,7 @@ return false
 end  
 if not BasicConstructor(msg) then
 if redis:get(bot_id..":"..msg.chat_id..":settings:Up") then
-bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الرفع معطل بواسطه الرائدين الاساسيين .*").yu,"md",true)  
+bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الرفع معطل بواسطه المنشئين الاساسيين .*").yu,"md",true)  
 return false
 end
 end
@@ -5258,15 +5258,15 @@ if TextMsg == 'مطور' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
 elseif TextMsg == 'مالك' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
 else
 return false
@@ -5274,65 +5274,65 @@ end
 elseif developer(msg) then
 if TextMsg == 'مالك' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
 else
 return false
 end  
 elseif Creator(msg) then
-if TextMsg == 'رائد اساسي' then
+if TextMsg == 'منشئ اساسي' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
 else
 return false
 end  
 elseif BasicConstructor(msg) then
-if TextMsg == 'رائد' then
+if TextMsg == 'منشئ' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
 else
 return false
 end  
 elseif Constructor(msg) then
-if TextMsg == 'نقيب' then
+if TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
 else
 return false
 end  
 elseif Owner(msg) then
-if TextMsg == 'ملازم' then
+if TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
 else
 return false
 end  
 elseif Administrator(msg) then
-if TextMsg == 'جندي' then
+if TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,usetid)
 else
 return false
@@ -5434,7 +5434,7 @@ return false
 end
 if not BasicConstructor(msg) then
 if redis:get(bot_id..":"..msg.chat_id..":settings:ktm") then
-bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الكتم معطل بواسطه الرائدين الاساسيين .*").yu,"md",true)  
+bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الكتم معطل بواسطه المنشئين الاساسيين .*").yu,"md",true)  
 return false
 end
 end
@@ -5473,7 +5473,7 @@ return false
 end
 if not BasicConstructor(msg) then
 if redis:get(bot_id..":"..msg.chat_id..":settings:bn") then
-bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الحظر معطل بواسطه الرائدين الاساسيين .*").yu,"md",true)  
+bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الحظر معطل بواسطه المنشئين الاساسيين .*").yu,"md",true)  
 return false
 end
 end
@@ -5798,7 +5798,7 @@ return false
 end
 if not BasicConstructor(msg) then
 if redis:get(bot_id..":"..msg.chat_id..":settings:kik") then
-bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الطرد معطل بواسطه الرائدين الاساسيين .*").yu,"md",true)
+bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الطرد معطل بواسطه المنشئين الاساسيين .*").yu,"md",true)
 return false
 end
 end
@@ -5823,7 +5823,7 @@ return false
 end
 if not BasicConstructor(msg) then
 if redis:get(bot_id..":"..msg.chat_id..":settings:kik") then
-bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الطرد معطل بواسطه الرائدين الاساسيين .*").yu,"md",true)
+bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الطرد معطل بواسطه المنشئين الاساسيين .*").yu,"md",true)
 return false
 end
 end
@@ -5856,7 +5856,7 @@ return false
 end
 if not BasicConstructor(msg) then
 if redis:get(bot_id..":"..msg.chat_id..":settings:kik") then
-bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الطرد معطل بواسطه الرائدين الاساسيين .*").yu,"md",true)
+bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الطرد معطل بواسطه المنشئين الاساسيين .*").yu,"md",true)
 return false
 end
 end
@@ -5884,7 +5884,7 @@ return false
 end
 if not BasicConstructor(msg) then
 if redis:get(bot_id..":"..msg.chat_id..":settings:bn") then
-bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الحظر معطل بواسطه الرائدين الاساسيين .*").yu,"md",true)  
+bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الحظر معطل بواسطه المنشئين الاساسيين .*").yu,"md",true)  
 return false
 end
 end
@@ -5910,7 +5910,7 @@ return false
 end
 if not BasicConstructor(msg) then
 if redis:get(bot_id..":"..msg.chat_id..":settings:bn") then
-bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الحظر معطل بواسطه الرائدين الاساسيين .*").yu,"md",true)  
+bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الحظر معطل بواسطه المنشئين الاساسيين .*").yu,"md",true)  
 return false
 end
 end
@@ -5944,7 +5944,7 @@ return false
 end
 if not BasicConstructor(msg) then
 if redis:get(bot_id..":"..msg.chat_id..":settings:bn") then
-bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الحظر معطل بواسطه الرائدين الاساسيين .*").yu,"md",true)  
+bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الحظر معطل بواسطه المنشئين الاساسيين .*").yu,"md",true)  
 return false
 end
 end
@@ -6020,7 +6020,7 @@ return false
 end
 if not BasicConstructor(msg) then
 if redis:get(bot_id..":"..msg.chat_id..":settings:ktm") then
-bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الكتم معطل بواسطه الرائدين الاساسيين .*").yu,"md",true)  
+bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الكتم معطل بواسطه المنشئين الاساسيين .*").yu,"md",true)  
 return false
 end
 end
@@ -6045,7 +6045,7 @@ return false
 end
 if not BasicConstructor(msg) then
 if redis:get(bot_id..":"..msg.chat_id..":settings:ktm") then
-bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الكتم معطل بواسطه الرائدين الاساسيين .*").yu,"md",true)  
+bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الكتم معطل بواسطه المنشئين الاساسيين .*").yu,"md",true)  
 return false
 end
 end
@@ -6074,7 +6074,7 @@ return false
 end
 if not BasicConstructor(msg) then
 if redis:get(bot_id..":"..msg.chat_id..":settings:ktm") then
-bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الكتم معطل بواسطه الرائدين الاساسيين .*").yu,"md",true)  
+bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الكتم معطل بواسطه المنشئين الاساسيين .*").yu,"md",true)  
 return false
 end
 end
@@ -6747,7 +6747,7 @@ end
 bot.sendText(msg.chat_id,msg.id,Text,"md",true)
 end
 --
-if text == 'تفعيل الجنديات' then 
+if text == 'تفعيل المميزات' then 
 if redis:get(bot_id..":"..msg.chat_id..":Features") then
 Text = Reply_Status(msg.sender.user_id,"*- تم "..text.." بنجاح .*").by
 redis:del(bot_id..":"..msg.chat_id..":Features")  
@@ -6756,7 +6756,7 @@ Text = Reply_Status(msg.sender.user_id,"*- تم "..text.." سابقا .*").yu
 end
 bot.sendText(msg.chat_id,msg.id,Text,"md",true)
 end
-if text == 'تعطيل الجنديات' then  
+if text == 'تعطيل المميزات' then  
 if not redis:get(bot_id..":"..msg.chat_id..":Features") then
 redis:set(bot_id..":"..msg.chat_id..":Features",true)  
 Text = Reply_Status(msg.sender.user_id,"*- تم "..text.." بنجاح .*").by
@@ -6956,7 +6956,7 @@ end
 bot.sendText(msg.chat_id,msg.id,Text,"md",true)
 end
 --
-if text == 'تفعيل الردود' or text == 'تفعيل ردود النقيب' then
+if text == 'تفعيل الردود' or text == 'تفعيل ردود المدير' then
 if redis:get(bot_id..":"..msg.chat_id..":settings:Reply") then
 Text = Reply_Status(msg.sender.user_id,"*- تم "..text.." بنجاح .*").by
 redis:del(bot_id..":"..msg.chat_id..":settings:Reply")  
@@ -6965,7 +6965,7 @@ Text = Reply_Status(msg.sender.user_id,"*- تم "..text.." سابقا .*").yu
 end
 bot.sendText(msg.chat_id,msg.id,Text,"md",true)
 end
-if text == 'تعطيل الردود' or text == 'تعطيل ردود النقيب' then
+if text == 'تعطيل الردود' or text == 'تعطيل ردود المدير' then
 if not redis:get(bot_id..":"..msg.chat_id..":settings:Reply") then
 redis:set(bot_id..":"..msg.chat_id..":settings:Reply",true)  
 Text = Reply_Status(msg.sender.user_id,"*- تم "..text.." بنجاح .*").by
@@ -7277,19 +7277,19 @@ srt1 = ":"
 elseif TextMsg == 'مالك' then
 srt = "Creator"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 srt = "BasicConstructor"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 srt = "Constructor"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 srt = "Owner"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 srt = "Administrator"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 srt = "Vips"
 srt1 = ":"..msg.chat_id..":"
 else
@@ -7297,7 +7297,7 @@ return false
 end  
 if not BasicConstructor(msg) then
 if redis:get(bot_id..":"..msg.chat_id..":settings:up") then
-bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الرفع معطل بواسطه الرائدين الاساسيين .*").yu,"md",true)  
+bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الرفع معطل بواسطه المنشئين الاساسيين .*").yu,"md",true)  
 return false
 end
 end
@@ -7312,15 +7312,15 @@ if TextMsg == 'مطور' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
 elseif TextMsg == 'مالك' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
 else
 return false
@@ -7328,65 +7328,65 @@ end
 elseif developer(msg) then
 if TextMsg == 'مالك' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
 else
 return false
 end  
 elseif Creator(msg) then
-if TextMsg == 'رائد اساسي' then
+if TextMsg == 'منشئ اساسي' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
 else
 return false
 end  
 elseif BasicConstructor(msg) then
-if TextMsg == 'رائد' then
+if TextMsg == 'منشئ' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
 else
 return false
 end  
 elseif Constructor(msg) then
-if TextMsg == 'نقيب' then
+if TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
 else
 return false
 end  
 elseif Owner(msg) then
-if TextMsg == 'ملازم' then
+if TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
 else
 return false
 end  
 elseif Administrator(msg) then
-if TextMsg == 'جندي' then
+if TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserName)
 else
 return false
@@ -7427,19 +7427,19 @@ srt1 = ":"
 elseif TextMsg == 'مالك' then
 srt = "Creator"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 srt = "BasicConstructor"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 srt = "Constructor"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 srt = "Owner"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 srt = "Administrator"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 srt = "Vips"
 srt1 = ":"..msg.chat_id..":"
 else
@@ -7456,7 +7456,7 @@ return false
 end
 if not BasicConstructor(msg) then
 if redis:get(bot_id..":"..msg.chat_id..":settings:up") then
-bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الرفع معطل بواسطه الرائدين الاساسيين .*").yu,"md",true)  
+bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الرفع معطل بواسطه المنشئين الاساسيين .*").yu,"md",true)  
 return false
 end
 end
@@ -7471,15 +7471,15 @@ if TextMsg == 'مطور' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
 elseif TextMsg == 'مالك' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
 else
 return false
@@ -7487,65 +7487,65 @@ end
 elseif developer(msg) then
 if TextMsg == 'مالك' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
 else
 return false
 end  
 elseif Creator(msg) then
-if TextMsg == 'رائد اساسي' then
+if TextMsg == 'منشئ اساسي' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
 else
 return false
 end  
 elseif BasicConstructor(msg) then
-if TextMsg == 'رائد' then
+if TextMsg == 'منشئ' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
 else
 return false
 end  
 elseif Constructor(msg) then
-if TextMsg == 'نقيب' then
+if TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
 else
 return false
 end  
 elseif Owner(msg) then
-if TextMsg == 'ملازم' then
+if TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
 else
 return false
 end  
 elseif Administrator(msg) then
-if TextMsg == 'جندي' then
+if TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,UserId_Info.id)
 else
 return false
@@ -7571,19 +7571,19 @@ srt1 = ":"
 elseif TextMsg == 'مالك' then
 srt = "Creator"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 srt = "BasicConstructor"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 srt = "Constructor"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 srt = "Owner"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 srt = "Administrator"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 srt = "Vips"
 srt1 = ":"..msg.chat_id..":"
 else
@@ -7591,7 +7591,7 @@ return false
 end  
 if not BasicConstructor(msg) then
 if redis:get(bot_id..":"..msg.chat_id..":settings:up") then
-bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الرفع معطل بواسطه الرائدين الاساسيين .*").yu,"md",true)  
+bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- الرفع معطل بواسطه المنشئين الاساسيين .*").yu,"md",true)  
 return false
 end
 end
@@ -7616,15 +7616,15 @@ if TextMsg == 'مطور' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
 elseif TextMsg == 'مالك' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
 else
 return false
@@ -7632,65 +7632,65 @@ end
 elseif developer(msg) then
 if TextMsg == 'مالك' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
 else
 return false
 end  
 elseif Creator(msg) then
-if TextMsg == 'رائد اساسي' then
+if TextMsg == 'منشئ اساسي' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
 else
 return false
 end  
 elseif BasicConstructor(msg) then
-if TextMsg == 'رائد' then
+if TextMsg == 'منشئ' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
 else
 return false
 end  
 elseif Constructor(msg) then
-if TextMsg == 'نقيب' then
+if TextMsg == 'مدير' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
 else
 return false
 end  
 elseif Owner(msg) then
-if TextMsg == 'ملازم' then
+if TextMsg == 'ادمن' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
 else
 return false
 end  
 elseif Administrator(msg) then
-if TextMsg == 'جندي' then
+if TextMsg == 'مميز' then
 redis:sadd(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
 else
 return false
@@ -7722,19 +7722,19 @@ srt1 = ":"
 elseif TextMsg == 'مالك' then
 srt = "Creator"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 srt = "BasicConstructor"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 srt = "Constructor"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 srt = "Owner"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 srt = "Administrator"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 srt = "Vips"
 srt1 = ":"..msg.chat_id..":"
 else
@@ -7751,15 +7751,15 @@ if TextMsg == 'مطور' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
 elseif TextMsg == 'مالك' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
 else
 return false
@@ -7767,65 +7767,65 @@ end
 elseif developer(msg) then
 if TextMsg == 'مالك' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
 else
 return false
 end  
 elseif Creator(msg) then
-if TextMsg == 'رائد اساسي' then
+if TextMsg == 'منشئ اساسي' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
 else
 return false
 end  
 elseif BasicConstructor(msg) then
-if TextMsg == 'رائد' then
+if TextMsg == 'منشئ' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
 else
 return false
 end  
 elseif Constructor(msg) then
-if TextMsg == 'نقيب' then
+if TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
 else
 return false
 end  
 elseif Owner(msg) then
-if TextMsg == 'ملازم' then
+if TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
 else
 return false
 end  
 elseif Administrator(msg) then
-if TextMsg == 'جندي' then
+if TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserName)
 else
 return false
@@ -7866,19 +7866,19 @@ srt1 = ":"
 elseif TextMsg == 'مالك' then
 srt = "Creator"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 srt = "BasicConstructor"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 srt = "Constructor"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 srt = "Owner"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 srt = "Administrator"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 srt = "Vips"
 srt1 = ":"..msg.chat_id..":"
 else
@@ -7904,15 +7904,15 @@ if TextMsg == 'مطور' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
 elseif TextMsg == 'مالك' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
 else
 return false
@@ -7920,65 +7920,65 @@ end
 elseif developer(msg) then
 if TextMsg == 'مالك' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
 else
 return false
 end  
 elseif Creator(msg) then
-if TextMsg == 'رائد اساسي' then
+if TextMsg == 'منشئ اساسي' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
 else
 return false
 end  
 elseif BasicConstructor(msg) then
-if TextMsg == 'رائد' then
+if TextMsg == 'منشئ' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
 else
 return false
 end  
 elseif Constructor(msg) then
-if TextMsg == 'نقيب' then
+if TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
 else
 return false
 end  
 elseif Owner(msg) then
-if TextMsg == 'ملازم' then
+if TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
 else
 return false
 end  
 elseif Administrator(msg) then
-if TextMsg == 'جندي' then
+if TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,UserId_Info.id)
 else
 return false
@@ -8004,19 +8004,19 @@ srt1 = ":"
 elseif TextMsg == 'مالك' then
 srt = "Creator"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 srt = "BasicConstructor"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 srt = "Constructor"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 srt = "Owner"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 srt = "Administrator"
 srt1 = ":"..msg.chat_id..":"
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 srt = "Vips"
 srt1 = ":"..msg.chat_id..":"
 else
@@ -8043,15 +8043,15 @@ if TextMsg == 'مطور' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
 elseif TextMsg == 'مالك' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
 else
 return false
@@ -8059,65 +8059,65 @@ end
 elseif developer(msg) then
 if TextMsg == 'مالك' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'رائد اساسي' then
+elseif TextMsg == 'منشئ اساسي' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
 else
 return false
 end  
 elseif Creator(msg) then
-if TextMsg == 'رائد اساسي' then
+if TextMsg == 'منشئ اساسي' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'رائد' then
+elseif TextMsg == 'منشئ' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
 else
 return false
 end  
 elseif BasicConstructor(msg) then
-if TextMsg == 'رائد' then
+if TextMsg == 'منشئ' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'نقيب' then
+elseif TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
 else
 return false
 end  
 elseif Constructor(msg) then
-if TextMsg == 'نقيب' then
+if TextMsg == 'مدير' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'ملازم' then
+elseif TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
 else
 return false
 end  
 elseif Owner(msg) then
-if TextMsg == 'ملازم' then
+if TextMsg == 'ادمن' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
-elseif TextMsg == 'جندي' then
+elseif TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
 else
 return false
 end  
 elseif Administrator(msg) then
-if TextMsg == 'جندي' then
+if TextMsg == 'مميز' then
 redis:srem(bot_id..srt1.."Status:"..srt,Remsg.sender.user_id)
 else
 return false
@@ -8184,7 +8184,7 @@ end
 end
 bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,t).yu,"md",true)  
 end
-if text == 'الرائدين الاساسيين' then
+if text == 'المنشئين الاساسيين' then
 t = '\n*- قائمه '..text..'  \n ٴ ٴ— — — — — — — — — — — — *\n'
 local Info_ = redis:smembers(bot_id..":"..msg.chat_id..":Status:BasicConstructor") 
 if #Info_ == 0 then
@@ -8201,7 +8201,7 @@ end
 end
 bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,t).yu,"md",true)  
 end
-if text == 'الرائدين' then
+if text == 'المنشئين' then
 t = '\n*- قائمه '..text..'  \n ٴ ٴ— — — — — — — — — — — — *\n'
 local Info_ = redis:smembers(bot_id..":"..msg.chat_id..":Status:Constructor") 
 if #Info_ == 0 then
@@ -8235,7 +8235,7 @@ end
 end
 bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,t).yu,"md",true)  
 end
-if text == 'الملازميه' then
+if text == 'الادمنيه' then
 t = '\n*- قائمه '..text..'  \n ٴ ٴ— — — — — — — — — — — — *\n'
 local Info_ = redis:smembers(bot_id..":"..msg.chat_id..":Status:Administrator") 
 if #Info_ == 0 then
@@ -8252,7 +8252,7 @@ end
 end
 bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,t).yu,"md",true)  
 end
-if text == 'الجنديين' then
+if text == 'المميزين' then
 t = '\n*- قائمه '..text..'  \n ٴ ٴ— — — — — — — — — — — — *\n'
 local Info_ = redis:smembers(bot_id..":"..msg.chat_id..":Status:Vips") 
 if #Info_ == 0 then
@@ -8298,7 +8298,7 @@ end
 redis:del(bot_id..":"..msg.chat_id..":Status:Creator") 
 bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- تم "..text.." بنجاح .*").yu,"md",true)  
 end
-if text == 'مسح الرائدين الاساسيين' and Creator(msg) then
+if text == 'مسح المنشئين الاساسيين' and Creator(msg) then
 local Info_ = redis:smembers(bot_id..":"..msg.chat_id..":Status:BasicConstructor") 
 if #Info_ == 0 then
 bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- تم حذف "..text:gsub('مسح',"").." سابقا .*").yu,"md",true)  
@@ -8307,7 +8307,7 @@ end
 redis:del(bot_id..":"..msg.chat_id..":Status:BasicConstructor") 
 bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- تم "..text.." بنجاح .*").yu,"md",true)  
 end
-if text == 'مسح الرائدين' and BasicConstructor(msg) then
+if text == 'مسح المنشئين' and BasicConstructor(msg) then
 local Info_ = redis:smembers(bot_id..":"..msg.chat_id..":Status:Constructor") 
 if #Info_ == 0 then
 bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- تم حذف "..text:gsub('مسح',"").." سابقا .*").yu,"md",true)  
@@ -8325,7 +8325,7 @@ end
 redis:del(bot_id..":"..msg.chat_id..":Status:Owner") 
 bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- تم "..text.." بنجاح .*").yu,"md",true)  
 end
-if text == 'مسح الملازميه' and Owner(msg) then
+if text == 'مسح الادمنيه' and Owner(msg) then
 local Info_ = redis:smembers(bot_id..":"..msg.chat_id..":Status:Administrator") 
 if #Info_ == 0 then
 bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- تم حذف "..text:gsub('مسح',"").." سابقا .*").yu,"md",true)  
@@ -8334,7 +8334,7 @@ end
 redis:del(bot_id..":"..msg.chat_id..":Status:Administrator") 
 bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- تم "..text.." بنجاح .*").yu,"md",true)  
 end
-if text == 'مسح الجنديين' and Administrator(msg) then
+if text == 'مسح المميزين' and Administrator(msg) then
 local Info_ = redis:smembers(bot_id..":"..msg.chat_id..":Status:Vips") 
 if #Info_ == 0 then
 bot.sendText(msg.chat_id,msg.id,Reply_Status(msg.sender.user_id,"*- تم حذف "..text:gsub('مسح',"").." سابقا .*").yu,"md",true)  
@@ -8475,7 +8475,7 @@ end
 if msg.content.text then
 if msg.content.text.text == "غنيلي" and tonumber(msg.reply_to_message_id) == 0 then
 if redis:get(bot_id..":"..msg.chat_id..":Features") then
-return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل الجنديات بواسطه المدراء .*","md",true)  
+return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل المميزات بواسطه المدراء .*","md",true)  
 end
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -8490,7 +8490,7 @@ end
 if msg.content.text then
 if msg.content.text.text == "شعر" and tonumber(msg.reply_to_message_id) == 0 then
 if redis:get(bot_id..":"..msg.chat_id..":Features") then
-return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل الجنديات بواسطه المدراء .*","md",true)  
+return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل المميزات بواسطه المدراء .*","md",true)  
 end
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -8505,7 +8505,7 @@ end
 if msg.content.text then
 if msg.content.text.text == "ميمز" and tonumber(msg.reply_to_message_id) == 0 then
 if redis:get(bot_id..":"..msg.chat_id..":Features") then
-return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل الجنديات بواسطه المدراء .*","md",true)  
+return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل المميزات بواسطه المدراء .*","md",true)  
 end
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -8520,7 +8520,7 @@ end
 if msg.content.text then
 if msg.content.text.text == "راب" and tonumber(msg.reply_to_message_id) == 0 then
 if redis:get(bot_id..":"..msg.chat_id..":Features") then
-return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل الجنديات بواسطه المدراء .*","md",true)  
+return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل المميزات بواسطه المدراء .*","md",true)  
 end
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -8535,7 +8535,7 @@ end
 if msg.content.text then
 if msg.content.text.text == "ريمكس" and tonumber(msg.reply_to_message_id) == 0 then
 if redis:get(bot_id..":"..msg.chat_id..":Features") then
-return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل الجنديات بواسطه المدراء .*","md",true)  
+return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل المميزات بواسطه المدراء .*","md",true)  
 end
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -8550,7 +8550,7 @@ end
 if msg.content.text then
 if msg.content.text.text == "فيديو" and tonumber(msg.reply_to_message_id) == 0 then
 if redis:get(bot_id..":"..msg.chat_id..":Features") then
-return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل الجنديات بواسطه المدراء .*","md",true)  
+return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل المميزات بواسطه المدراء .*","md",true)  
 end
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -8565,7 +8565,7 @@ end
 if msg.content.text then
 if msg.content.text.text == "متحركه" and tonumber(msg.reply_to_message_id) == 0 then
 if redis:get(bot_id..":"..msg.chat_id..":Features") then
-return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل الجنديات بواسطه المدراء .*","md",true)  
+return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل المميزات بواسطه المدراء .*","md",true)  
 end
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -8580,7 +8580,7 @@ end
 if msg.content.text then
 if msg.content.text.text == "فلم" and tonumber(msg.reply_to_message_id) == 0 then
 if redis:get(bot_id..":"..msg.chat_id..":Features") then
-return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل الجنديات بواسطه المدراء .*","md",true)  
+return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل المميزات بواسطه المدراء .*","md",true)  
 end
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -8595,7 +8595,7 @@ end
 if msg.content.text then
 if msg.content.text.text == "كارتون" and tonumber(msg.reply_to_message_id) == 0 then
 if redis:get(bot_id..":"..msg.chat_id..":Features") then
-return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل الجنديات بواسطه المدراء .*","md",true)  
+return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل المميزات بواسطه المدراء .*","md",true)  
 end
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -8610,7 +8610,7 @@ end
 if msg.content.text then
 if msg.content.text.text == "رمزيه" or text == "صوره" and tonumber(msg.reply_to_message_id) == 0 then
 if redis:get(bot_id..":"..msg.chat_id..":Features") then
-return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل الجنديات بواسطه المدراء .*","md",true)  
+return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل المميزات بواسطه المدراء .*","md",true)  
 end
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -8625,7 +8625,7 @@ end
 if msg.content.text then
 if msg.content.text.text == "انمي"  and tonumber(msg.reply_to_message_id) == 0 then
 if redis:get(bot_id..":"..msg.chat_id..":Features") then
-return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل الجنديات بواسطه المدراء .*","md",true)  
+return bot.sendText(msg.chat_id,msg.id,"*- تم تعطيل المميزات بواسطه المدراء .*","md",true)  
 end
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -8758,7 +8758,7 @@ end
 nameBot = {"شـغال عمࢪيي🤓💘"}
 bot.sendText(msg.chat_id,msg.id," .*"..nameBot[math.random(#nameBot)].." .*","md",true)  
 end
-if text == "ون نقيب" or text == "وين نقيب" then
+if text == "ون مدير" or text == "وين مدير" then
 if redis:get(bot_id..":"..msg.chat_id..":Rdodbot") then
 return bot.sendText(msg.chat_id,msg.id,"md",true)  
 end
@@ -8846,7 +8846,7 @@ end
 ----------------------------------------------------------------------------------------------------
 if text == 'تفعيل' then
 if msg.can_be_deleted_for_all_users == false then
-bot.sendText(msg.chat_id,msg.id,"*- عذراً البوت ليس ملازم في المجموعه .*","md",true)  
+bot.sendText(msg.chat_id,msg.id,"*- عذراً البوت ليس ادمن في المجموعه .*","md",true)  
 return false
 end
 sm = bot.getChatMember(msg.chat_id,msg.sender.user_id)
@@ -8874,14 +8874,14 @@ data = {
 }
 }
 UserInfo = bot.getUser(msg.sender.user_id).first_name
-bot.sendText(sudoid,0,'*\n- تم تفعيل مجموعه جديده \n- بواسطه : (*['..UserInfo..'](tg://user?id='..msg.sender.user_id..')*)\n- معلومات المجموعه :\n- عدد الاعضاء : '..Info_Chats.member_count..'\n- عدد الملازميه : '..Info_Chats.administrator_count..'\n- عدد المطرودين : '..Info_Chats.banned_count..'\n- عدد المقيدين : '..Info_Chats.restricted_count..'\n- الرابط\n : '..Info_Chats.invite_link.invite_link..'*',"md", true, false, false, false, reply_markup)
+bot.sendText(sudoid,0,'*\n- تم تفعيل مجموعه جديده \n- بواسطه : (*['..UserInfo..'](tg://user?id='..msg.sender.user_id..')*)\n- معلومات المجموعه :\n- عدد الاعضاء : '..Info_Chats.member_count..'\n- عدد الادمنيه : '..Info_Chats.administrator_count..'\n- عدد المطرودين : '..Info_Chats.banned_count..'\n- عدد المقيدين : '..Info_Chats.restricted_count..'\n- الرابط\n : '..Info_Chats.invite_link.invite_link..'*',"md", true, false, false, false, reply_markup)
 bot.sendText(msg.chat_id,msg.id,'*- تم تفعيل المجموعه بنجاح .*',"md", true, false, false, false, reply_markup)
 redis:sadd(bot_id..":Groups",msg.chat_id)
 end
 end
 if text == 'تعطيل' then
 if msg.can_be_deleted_for_all_users == false then
-bot.sendText(msg.chat_id,msg.id,"*- عذراً البوت ليس ملازم في المجموعه .*","md",true)  
+bot.sendText(msg.chat_id,msg.id,"*- عذراً البوت ليس ادمن في المجموعه .*","md",true)  
 return false
 end
 sm = bot.getChatMember(msg.chat_id,msg.sender.user_id)
@@ -8901,7 +8901,7 @@ data = {
 }
 }
 UserInfo = bot.getUser(msg.sender.user_id).first_name
-bot.sendText(sudoid,0,'*\n- تم تعطيل المجموعه التاليه : \n- بواسطه : (*['..UserInfo..'](tg://user?id='..msg.sender.user_id..')*)\n- معلومات المجموعه :\n- عدد الاعضاء : '..Info_Chats.member_count..'\n- عدد الملازميه : '..Info_Chats.administrator_count..'\n- عدد المطرودين : '..Info_Chats.banned_count..'\n- عدد المقيدين : '..Info_Chats.restricted_count..'\n- الرابط\n : '..Info_Chats.invite_link.invite_link..'*',"md", true, false, false, false, reply_markup)
+bot.sendText(sudoid,0,'*\n- تم تعطيل المجموعه التاليه : \n- بواسطه : (*['..UserInfo..'](tg://user?id='..msg.sender.user_id..')*)\n- معلومات المجموعه :\n- عدد الاعضاء : '..Info_Chats.member_count..'\n- عدد الادمنيه : '..Info_Chats.administrator_count..'\n- عدد المطرودين : '..Info_Chats.banned_count..'\n- عدد المقيدين : '..Info_Chats.restricted_count..'\n- الرابط\n : '..Info_Chats.invite_link.invite_link..'*',"md", true, false, false, false, reply_markup)
 bot.sendText(msg.chat_id,msg.id,'*- تم تعطيل المجموعه بنجاح .*',"md",true, false, false, false, reply_markup)
 redis:srem(bot_id..":Groups",msg.chat_id)
 local keys = redis:keys(bot_id..'*'..'-100'..data.supergroup.id..'*')
@@ -8949,7 +8949,7 @@ data = {
 {{text = Get_Chat.title, url = Info_Chats.invite_link.invite_link}},
 }
 }
-return bot.sendText(sudoid,0,'- تم طرد البوت من مجموعه جديده\n- معلومات المجموعه :\n- الايدي : ( -100'..data.supergroup.id..' )\n*- عدد الاعضاء : '..Info_Chats.member_count..'\n- عدد الملازميه : '..Info_Chats.administrator_count..'\n- عدد المطرودين : '..Info_Chats.banned_count..'\n- عدد المقيدين : '..Info_Chats.restricted_count..'\n- الرابط\n : '..Info_Chats.invite_link.invite_link..'*',"md",true, false, false, false, reply_markup)
+return bot.sendText(sudoid,0,'- تم طرد البوت من مجموعه جديده\n- معلومات المجموعه :\n- الايدي : ( -100'..data.supergroup.id..' )\n*- عدد الاعضاء : '..Info_Chats.member_count..'\n- عدد الادمنيه : '..Info_Chats.administrator_count..'\n- عدد المطرودين : '..Info_Chats.banned_count..'\n- عدد المقيدين : '..Info_Chats.restricted_count..'\n- الرابط\n : '..Info_Chats.invite_link.invite_link..'*',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -8988,7 +8988,7 @@ if redis:get(bot_id..":TheCh") then
 infokl = bot.getChatMember(redis:get(bot_id..":TheCh"),bot_id)
 if infokl and infokl.status and infokl.status.luatele == "chatMemberStatusAdministrator" then
 if not devS(data.message.sender.user_id) then
-if td == "/start" or  td == "ايدي" or  td == "الرابط" or  td == "قفل الكل" or  td == "فتح الكل" or  td == "الاوامر" or  td == "م1" or  td == "م2" or  td == "م3" or  td == "كشف" or  td == "رتبتي" or  td == "الرائد" or  td == "قفل الصور" or  td == "قفل الالعاب" or  td == "الالعاب" or  td == "العكس" or  td == "روليت" or  td == "كت" or  td == "تنزيل الكل" or  td == "رفع ملازم" or  td == "رفع جندي" or  td == "رفع رائد" or  td == "المكتومين" or  td == "قفل المتحركات"  then
+if td == "/start" or  td == "ايدي" or  td == "الرابط" or  td == "قفل الكل" or  td == "فتح الكل" or  td == "الاوامر" or  td == "م1" or  td == "م2" or  td == "م3" or  td == "كشف" or  td == "رتبتي" or  td == "المنشئ" or  td == "قفل الصور" or  td == "قفل الالعاب" or  td == "الالعاب" or  td == "العكس" or  td == "روليت" or  td == "كت" or  td == "تنزيل الكل" or  td == "رفع ادمن" or  td == "رفع مميز" or  td == "رفع منشئ" or  td == "المكتومين" or  td == "قفل المتحركات"  then
 if bot.getChatMember(redis:get(bot_id..":TheCh"),data.message.sender.user_id).status.luatele == "chatMemberStatusLeft" then
 Get_Chat = bot.getChat(redis:get(bot_id..":TheCh"))
 Info_Chats = bot.getSupergroupFullInfo(redis:get(bot_id..":TheCh"))
